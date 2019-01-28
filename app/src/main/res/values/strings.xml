@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AsyncTaskLoaderImpl</string>
+    <string name="npe_try_again_please">Error!Try again please!</string>
+</resources>
