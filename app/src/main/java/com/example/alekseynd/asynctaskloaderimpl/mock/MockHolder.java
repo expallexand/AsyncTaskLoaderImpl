@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.alekseynd.asynctaskloaderimpl.ContactsAdapter;
 import com.example.alekseynd.asynctaskloaderimpl.R;
 
 public class MockHolder extends RecyclerView.ViewHolder {
@@ -20,5 +21,14 @@ public class MockHolder extends RecyclerView.ViewHolder {
     public void bind(Mock mock) {
         mName.setText(mock.getName());
         mValue.setText(mock.getValue());
+    }
+
+    public void setListener(final ContactsAdapter.OnItemClickListener onItemClickListener) {
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickListener.onItemClick();
+            }
+        });
     }
 }
