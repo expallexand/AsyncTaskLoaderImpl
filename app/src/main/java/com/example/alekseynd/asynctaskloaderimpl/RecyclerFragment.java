@@ -61,6 +61,7 @@ public class RecyclerFragment extends Fragment implements SwipeRefreshLayout.OnR
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setAdapter(mContactsAdapter);
         mContactsAdapter.setListener(mOnItemClickListener);
+        mRecyclerView.addItemDecoration(new CardDecoration());
 
     }
 
